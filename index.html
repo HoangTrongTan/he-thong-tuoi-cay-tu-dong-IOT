@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body
+    style="
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div style="display: flex; flex-wrap: wrap;">
+      <video width="400" controls>
+        <source src="vd/20240329_144029.mp4" type="video/mp4" />
+        <source src="mov_bbb.ogg" type="video/ogg" />
+        Your browser does not support HTML video.
+      </video>
+      <iframe
+        src="pdfd.pdf"
+        width="700"
+        height="710"
+        allowfullscreen
+        webkitallowfullscreen
+      ></iframe>
+    </div>
+  </body>
+
+  <script
+    src="
+https://cdn.jsdelivr.net/npm/document-viewer-ts@0.7.0-legacy/dist/lib/index.min.js
+"
+  >
+    import {init} from 'document-viewer';
+    init("pdfd.pdf");
+  </script>
+</html>
